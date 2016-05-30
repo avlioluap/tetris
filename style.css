@@ -1,0 +1,40 @@
+html,
+body {
+    min-height: 100%;
+    height: 100%;
+    text-align: center;
+    width: 100%;       
+}
+
+body {
+    background: blue url('img/tetrisBg.jpg');
+    background-size: cover;    
+}
+
+#areaJogo {
+    background: white;
+    width: 500px;
+    display: block;
+    margin: 0 auto;
+}
+
+#proxPeca,
+#pontuacao {
+    height: 50px;
+    border-bottom: 1px solid black; 
+    float: left;
+    background-color: white;
+    text-align: left;
+}
+
+#pontuacao {
+    
+}
+#quadro {
+   
+}
+#quadro td {
+    padding: 0;
+    width: 10px;
+    height: 10px;
+}
