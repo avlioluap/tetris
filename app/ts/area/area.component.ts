@@ -7,28 +7,33 @@ import {config} from '../config.service';
 })
 
 export class Area {
-    
-    celulaArea:number  = config.AREA_CELULA;
+
     numLinhas:number   = config.NUM_LINHAS;
     numColunas:number  = config.NUM_COLUNAS;
-
-    board_linhas = [];
-    board_colunas = [];
+    
+    grid: number[][] = this.createGrid(this.numLinhas, this.numColunas);
    
-    constructor () {  
-        this.board(this.numLinhas, this.numColunas); 
+    constructor () {
+        //this.createGrid(this.numLinhas, this.numColunas);
     }
     
-    board(numLinhas, numColunas){
-       
-        for (var l = 0; l < this.numLinhas; l++) {
-             this.board_linhas[l] = [0];                     
-        }  
-        
-        for (var c = 0; c < this.numColunas; c++) {
-             this.board_colunas[c] = [0];                     
-        }                
-        //console.log(this.board_linhas);           
+    private createGrid(linhas:number, colunas:number): number[][] {
+        let grid = [];
+        for (let l = 0; l < linhas; l++) {
+            grid[l] = [];
+            for (let c = 0; c < colunas; c++) {
+                grid[l][c] = 0;
+            }
+        }        
+        return grid;        
+    }
+    
+    public static paintNewPiece(idPiece):void {
+        //new paintGrid();
+    }
+    
+    private paintGrid(id) {
+        this.grid[1][5] = id
     }
     
 }
